@@ -19,7 +19,7 @@ export default function Menu() {
     },
     {
       title: "Help & Contact",
-      to: "/"
+      to: "/about"
     }
   ]
   return (
