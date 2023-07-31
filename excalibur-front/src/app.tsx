@@ -5,6 +5,7 @@ import NotFound from "./pages/not-found";
 import Board from "./pages/board";
 import About from "./pages/about";
 import Header from "./components/header";
+import Brand from "./pages/brand";
   
 const App = () => {
 	return (
@@ -14,6 +15,7 @@ const App = () => {
 				<Routes>
 					<Route path="/" element={<Board />} />
 					<Route path="/about" element={<About />} />
+					<Route path="/brand" element={<Brand />} />
 					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</Suspense>
