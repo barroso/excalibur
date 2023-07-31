@@ -9,9 +9,24 @@ export default function Brand() {
     apiCaller.getBrands();
   }, []);
 
+  const brands = [
+    {
+      name: "Apple",
+    },
+    {
+      name: "JBL",
+    },
+    {
+      name: "Samsung",
+    },
+    {
+      name: "Elg",
+    },
+  ];
+
   return (
     <div className="flex gap-10 py-10 flex-row flex-wrap justify-center">
-      <Table/>
+      <Table brands={brands}/>
     </div>
   );
 }

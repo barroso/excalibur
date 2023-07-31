@@ -1,18 +1,14 @@
 import React from "react";
 import { useState } from "react";
 
-export default function Table() {
-  const brands = [
-    {
-      name: "Apple",
-    },
-    {
-      name: "JBL",
-    },
-    {
-      name: "Samsung",
-    },
-  ];
+interface Brand {
+  name: string;
+}
+interface IProps {
+  brands: Brand[];
+}
+
+const Table = ({ brands }: IProps) => {
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table className="w-full text-sm text-left text-sky-400 dark:text-sky-300 ">
@@ -50,3 +46,5 @@ export default function Table() {
     </div>
   );
 }
+
+export default Table;
