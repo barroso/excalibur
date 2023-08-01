@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import TableHead from "./TableHead";
 
 interface Brand {
   id: number;
@@ -13,16 +14,7 @@ const Table = ({ brands }: IProps) => {
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table className="w-full text-sm text-left text-sky-400 dark:text-sky-300 ">
-        <thead className="text-xs text-sky-700 bg-sky-50 dark:bg-sky-700 dark:text-sky-300">
-          <tr>
-            <th scope="col" className="px-6 py-3 w-96">
-              Brands
-            </th>
-            <th scope="col" className="px-6 py-3 w-32">
-              <span className="sr-only">Edit</span>
-            </th>
-          </tr>
-        </thead>
+        <TableHead title="Brands"/>
         <tbody>
           {brands.map((item, index) => (
             <tr key={item.id} className="bg-white border-b dark:bg-sky-800 dark:border-sky-700 hover:bg-sky-50 dark:hover:bg-sky-600">
