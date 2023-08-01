@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 interface Brand {
+  id: number;
   name: string;
 }
 interface IProps {
@@ -24,7 +25,7 @@ const Table = ({ brands }: IProps) => {
         </thead>
         <tbody>
           {brands.map((item, index) => (
-            <tr className="bg-white border-b dark:bg-sky-800 dark:border-sky-700 hover:bg-sky-50 dark:hover:bg-sky-600">
+            <tr key={item.id} className="bg-white border-b dark:bg-sky-800 dark:border-sky-700 hover:bg-sky-50 dark:hover:bg-sky-600">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-sky-900 whitespace-nowrap dark:text-white w-40"
