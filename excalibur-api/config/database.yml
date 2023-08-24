@@ -25,13 +25,17 @@
 #   <<: *default
 #   database: excalibur_api_development
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: 5
+  encoding: unicode
+  host: db
+  username: postgres
+  password: password
   timeout: 5000
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: db/development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -95,8 +99,8 @@ development:
 
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: db/test
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: db/production

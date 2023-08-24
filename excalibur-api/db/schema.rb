@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_07_27_134833) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "brands", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -27,8 +30,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_27_134833) do
     t.string "name"
     t.string "description"
     t.decimal "price"
-    t.integer "brand_id", null: false
-    t.integer "category_id", null: false
+    t.bigint "brand_id", null: false
+    t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["brand_id"], name: "index_products_on_brand_id"
